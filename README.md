@@ -1,22 +1,23 @@
-# TODO : Wenjia's website
+#Wenjia's website
 
-TODO : Resume.
+I'm a student studying in University of Pittsburgh in MSIS program.
+This is a web course project. Homework one.
 
 ## Build status
 
-TODO : Modify to match your project specific Travis Build
 [![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web)
 
 ## Web Site
 
-//TODO : Please provide a link to your web site ![](https://...)
 [Wenjia's website](https://vast-lowlands-52494.herokuapp.com/)
+
 ## Key Features
 
 TODO : Please list key features of your project.
 
 * Key Feature 1
 * Key Feature 2
+* Key Feature 3
 * Key Feature N
 
 ## Project Details
