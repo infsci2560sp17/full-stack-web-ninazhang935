@@ -1,6 +1,6 @@
 # Wenjia's website
 
-TODO : Resume.
+I'm a master student in MSIS.
 ## Build status
 
 TODO : Modify to match your project specific Travis Build
