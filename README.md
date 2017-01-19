@@ -1,7 +1,6 @@
-# TODO : Wenjia's website
+# Wenjia's website
 
 TODO : Resume.
-
 ## Build status
 
 TODO : Modify to match your project specific Travis Build
