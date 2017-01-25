@@ -1,15 +1,19 @@
-# Wenjia's website
+# Diet
 
 I'm a master student in MSIS.
+
 ## Build status
-
-
 [![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web-ninazhang935.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web-ninazhang935)
+
+## Changelog
+
+[Changelog](CHANGELOG.md) 
 
 ## Web Site
 
-[](https://...)
-[Wenjia's website](https://vast-lowlands-52494.herokuapp.com/)
+[Diet](https://vast-lowlands-52494.herokuapp.com/)
+![](https://www.google.com/search?q=diet&biw=1439&bih=720&source=lnms&tbm=isch&sa=X&ved=0ahUKEwidi97iud7RAhWFQCYKHXJxDMoQ_AUIBygC&dpr=2#imgrc=Y31QfYh67CBWWM%3A)
+
 ## Key Features
 
 TODO : Please list key features of your project.
