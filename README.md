@@ -12,7 +12,7 @@ I'm a master student in MSIS.
 ## Web Site
 
 [Diet](https://vast-lowlands-52494.herokuapp.com/)
-![](https://www.google.com/search?q=diet&biw=1439&bih=720&source=lnms&tbm=isch&sa=X&ved=0ahUKEwidi97iud7RAhWFQCYKHXJxDMoQ_AUIBygC&dpr=2#imgrc=Y31QfYh67CBWWM%3A)
+![](https://...)
 
 ## Key Features
 
