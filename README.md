@@ -5,7 +5,8 @@
    - People want to lose weight or keep a diet.
 3. What problem is it intended to solve for the target audience?
    - People who want to keep in good shape probalby get in to hard condition to choose something to eat, because some food may contains much more calorie than one can imagine which will ruin the whole diet plan or the whole day's working-out. Furthermore, some have monotonous dishes like vegetables and fruits just in case of intake much calorie. I'll provide calorie inventory of all kinds of food and recommand abundant healthy, low-calorie dishes that they can choose from.
-
+4. How will it meet the minimum project requirements?
+  - My site 
 ## Build status
 [![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web-ninazhang935.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web-ninazhang935)
 
