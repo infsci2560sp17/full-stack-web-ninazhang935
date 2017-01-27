@@ -1,15 +1,17 @@
-#Wenjia's website
+# Diet
 
-I'm a student studying in University of Pittsburgh in MSIS program.
-This is a web course project. Homework one.
 
 ## Build status
+[![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web-ninazhang935.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web-ninazhang935)
 
-[![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web)
+## Changelog
+
+[Changelog](CHANGELOG.md) 
 
 ## Web Site
 
-[Wenjia's website](https://vast-lowlands-52494.herokuapp.com/)
+[Diet](https://vast-lowlands-52494.herokuapp.com/)
+
 
 ## Key Features
 
@@ -17,7 +19,6 @@ TODO : Please list key features of your project.
 
 * Key Feature 1
 * Key Feature 2
-* Key Feature 3
 * Key Feature N
 
 ## Project Details
