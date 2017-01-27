@@ -1,4 +1,28 @@
 # Diet
+1. What is the proposed name for your Web application?
+   - Diet
+2. Who is the target audience for your Web application?
+   - People want to lose weight or keep a diet. 
+3. What problem is it intended to solve for the target audience?
+   - More than a half People who want to loose weight can not keep going, 
+     they usually give up on the half way because of lacking encourage, motivation or supervision. 
+     People want to keep in good shape probalby get into hard condition to choose something to eat,
+     because some food may contains much more calorie than one can imagine which will ruin the whole 
+     diet plan or the whole day's working-out. Some have monotonous dishes like vegetables and fruits 
+     just in case of intake much calorie. I'll provide all kinds of healthy food and recommand abundant
+     low-calorie dishes that people can choose from.
+4. How will it meet the minimum project requirements?
+  - My site will include three parts: make your plan, low-fat menu, share with others.
+    People can access to the low-fat menu part without a login. But login is required if they want to 
+    customize their own plan, share their meal or commend on others' posting. I will store the login 
+    information and each user's plan to database. People can update their weight whenever they want. 
+    The system can remind you to keep going if you don't update you information for a long time.
+5. Why is your proposed Web application unique or creative beyond simply meeting the minimum requirements?
+  - People can customized their own plan in order to lossing weight or not putting up weight. 
+    And I can supervise them whether they keep going as well as they keep a healthy weight. 
+    Besides, the web application can send each user some encourage emails everyday to inspire them.
+    And people can share their meal, working-out records or the outcome of the plan. 
+    They can connect with each other to share some useful experience and encoureage others.
 
 
 ## Build status
