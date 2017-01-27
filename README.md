@@ -5,7 +5,11 @@
 [![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web-ninazhang935.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web-ninazhang935)
 
 ## Changelog
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 5237c21eb58ea53d6f1ebebacf3ca99ccd40aeef
 [Changelog](CHANGELOG.md) 
 
 ## Web Site
