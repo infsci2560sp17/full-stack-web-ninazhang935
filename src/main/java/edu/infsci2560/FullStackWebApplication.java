@@ -1,7 +1,8 @@
 package edu.infsci2560;
 
-import edu.infsci2560.models.Customer;
-import edu.infsci2560.repositories.CustomerRepository;
+import edu.infsci2560.models.Dvd;
+import edu.infsci2560.models.Dvd.WorkoutType;
+import edu.infsci2560.repositories.DvdRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,7 +18,12 @@ public class FullStackWebApplication {
     private static final Logger log = LoggerFactory.getLogger(FullStackWebApplication.class);
 
     public static void main(String[] args) {
-        SpringApplication.run(FullStackWebApplication.class, args);
+        //SpringApplication.run(FullStackWebApplication.class, args);
+        ApplicationContext ctx = SpringApplication.run(FullStackWebApplication.class, args);
+        DvdRepository repository = ctx.getBean(DvdRepository.class);
+        repository.save(new Dvd(1L, "P90X", WorkoutType.CrossTrain));
+        repository.save(new Dvd(2L, "Insanity", WorkoutType.Cardio));
+        repository.save(new Dvd(3L, "Body Beast", WorkoutType.Strength));
     }
 
 //    @Bean
@@ -34,7 +40,7 @@ public class FullStackWebApplication {
 //
 //        };
 //    }
-    @Bean
+   /* @Bean
     public CommandLineRunner databaseDemo(CustomerRepository repository) {
         return (args) -> {
             // save a couple of customers
@@ -66,5 +72,5 @@ public class FullStackWebApplication {
                 log.info("[Database Demo] " + bauer.toString());
             }            
         };
-    }
+    }*/
 }
