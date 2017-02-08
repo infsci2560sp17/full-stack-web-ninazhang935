@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  *
- * @author kolobj
+ * @author Wenjia
  */
 @RestController
 @RequestMapping("/public/api/dvds")
