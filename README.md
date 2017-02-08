@@ -34,7 +34,7 @@
 
 ## Web Site
 
-[Diet](https://vast-lowlands-52494.herokuapp.com/)
+[Diet](https://dry-waters-29024.herokuapp.com/)
 
 
 ## Key Features
