@@ -2,39 +2,57 @@
 <html>
     <head>
         <title>User Home</title>
+        <style>
+        table tr:nth-child(even) {
+            background-color: #eee;
+            padding: 5px;
+        }
+        table tr:nth-child(odd) {
+           background-color:#fff;
+           padding: 5px;
+        }
+        table th {
+            background-color: black;
+            color: white;
+            padding: 5px;
+        }
+        </style>
     </head>
-    <body>
-        <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s DVD's!</h1>
+    <body style="background-color:#8CC640;">
+        <h1 data-th-inline="text" style="text-align:center;">[[${#httpServletRequest.remoteUser}]]'s Plans !</h1>
 
         <div>
-            <table style="border: 1px solid black">
+            <table align="center" style="width:50%">
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
-                    <th>Workout Type</th>
+                    <th>Plan</th>
                 </tr>                
                 <tr data-th-each="dvd : ${dvds}">
                     <td data-th-text="${dvd.id}"></td>
                     <td data-th-text="${dvd.title}"></td>
-                    <td data-th-text="${dvd.workoutType}"></td>
+                    <td data-th-text="${dvd.plan}"></td>
                 </tr>
             </table>
         </div>
         
         <hr />
-        Add DVD<br />
-        <form data-th-action="@{/dvds/add}" name="addDvdForm" method="post">
-            Title: <input type="text" name="title" /><br />
-            Workout Type:<br />
-            <input type="radio" name="workoutType" value="Unknown" checked="checked" /> Unknown<br />
-            <input type="radio" name="workoutType" value="Strength" /> Strength<br />
-            <input type="radio" name="workoutType" value="Cardio" /> Cardio<br />
-            <input type="radio" name="workoutType" value="CrossTrain" /> CrossTrain<br />
-            <input type="submit" value="Add Workout"/>
+        
+        <p style="text-align:center; font-family:courier;">Add your plan<br />
+        <form align="center" data-th-action="@{/dvds/add}" name="addPlanForm" method="post">
+            Name: <input type="text" name="title" /><br />
+            How much weight do you want to loose:<br />
+            <input type="radio" name="plan" value="lessthan_5kg" checked="checked" /> less than 5kg<br />
+            <input type="radio" name="plan" value="between5to10kg" /> between 5-10kg<br />
+            <input type="radio" name="plan" value="morethan10kg" /> more than 10kg<br />
+            <input type="radio" name="plan" value="keepWeight" /> keep the weight<br />
+            <input type="submit" value="Submit your plan"/>
         </form>
+        </p>
         
         <hr />       
-        <form data-th-action="@{/logout}" method="post">
+        <form align="center" data-th-action="@{/logout}" method="post">
+            If you don't want to keep login, please sign out.
             <input type="submit" value="Sign Out"/>
         </form>
     </body>

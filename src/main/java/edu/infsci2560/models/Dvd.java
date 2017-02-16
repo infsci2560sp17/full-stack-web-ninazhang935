@@ -9,41 +9,41 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *
- * @author kolobj
+ * @author Wenjia
  */
 @Entity
 public class Dvd {
 
     private static final long serialVersionUID = 1L;
 
-    public enum WorkoutType {
-        Unknown,
-        Strength,
-        Cardio,
-        CrossTrain
+    public enum Plan {
+        lessthan_5kg,
+        between5to10kg,
+        morethan10kg,
+        keepWeight
     }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
     protected String title;
-    protected WorkoutType workoutType;
+    protected Plan plan;
 
     public Dvd() {
         this.id = Long.MAX_VALUE;
         this.title = null;
-        this.workoutType = WorkoutType.Unknown;
+        this.plan = Plan.keepWeight;
     }
 
-    public Dvd(Long id, String name, WorkoutType workoutType) {
+    public Dvd(Long id, String name, Plan plan) {
         this.id = id;
         this.title = name;
-        this.workoutType = workoutType;
+        this.plan=plan;
     }
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", title=" + this.title + ", workoutType=" + this.workoutType + " ]";
+        return "[ id=" + this.id + ", title=" + this.title + ", plan=" + this.plan + " ]";
     }
 
     @Override
@@ -73,15 +73,15 @@ public class Dvd {
     /**
      * @return the workoutType
      */
-    public WorkoutType getWorkoutType() {
-        return workoutType;
+    public Plan getPlan() {
+        return plan;
     }
 
     /**
      * @param workoutType the workoutType to set
      */
-    public void setWorkoutType(WorkoutType workoutType) {
-        this.workoutType = workoutType;
+    public void setPlan(Plan plan) {
+        this.plan = plan;
     }
 
     /**
