@@ -26,7 +26,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - Configured developer workspace.
 - Deployed to Heroku.
 
-[Upcoming]: https://github.com/infsci2560sp17/full-stack-web-ninazhang935/compare/v1.3.1...head
-[v1.3.1]: https://github.com/infsci2560sp17/full-stack-web-ninazhang935/compare/v1.2...v1.3.1
+[Upcoming]: https://github.com/infsci2560sp17/full-stack-web-ninazhang935/compare/v1.3.2...head
+[v1.3.2]: https://github.com/infsci2560sp17/full-stack-web-ninazhang935/compare/v1.2...v1.3.2
 [v1.2]: https://github.com/infsci2560sp17/full-stack-web-ninazhang935/compare/v1.1...v1.2
 [v1.1]: https://github.com/infsci2560sp17/full-stack-web-ninazhang935/compare/...v1.1
