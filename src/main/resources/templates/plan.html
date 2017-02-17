@@ -28,10 +28,10 @@
                     <th>Name</th>
                     <th>Plan</th>
                 </tr>                
-                <tr data-th-each="dvd : ${dvds}">
-                    <td data-th-text="${dvd.id}"></td>
-                    <td data-th-text="${dvd.title}"></td>
-                    <td data-th-text="${dvd.plan}"></td>
+                <tr data-th-each="plan : ${plans}">
+                    <td data-th-text="${plan.id}"></td>
+                    <td data-th-text="${plan.title}"></td>
+                    <td data-th-text="${plan.plan}"></td>
                 </tr>
             </table>
         </div>
@@ -39,7 +39,7 @@
         <hr />
         
         <p style="text-align:center; font-family:courier;">Add your plan<br />
-        <form align="center" data-th-action="@{/dvds/add}" name="addPlanForm" method="post">
+        <form align="center" data-th-action="@{/plans/add}" name="addPlanForm" method="post">
             Name: <input type="text" name="title" /><br />
             How much weight do you want to loose:<br />
             <input type="radio" name="plan" value="lessthan_5kg" checked="checked" /> less than 5kg<br />

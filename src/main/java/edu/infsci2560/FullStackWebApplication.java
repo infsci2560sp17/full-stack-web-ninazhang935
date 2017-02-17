@@ -1,8 +1,11 @@
 package edu.infsci2560;
 
-import edu.infsci2560.models.Dvd;
-import edu.infsci2560.models.Dvd.Plan;
-import edu.infsci2560.repositories.DvdRepository;
+//import edu.infsci2560.models.Dvd;
+//import edu.infsci2560.models.Dvd.Plan;
+//import edu.infsci2560.repositories.DvdRepository;
+import edu.infsci2560.models.Makeplan;
+import edu.infsci2560.models.Makeplan.Plan;
+import edu.infsci2560.repositories.PlanRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,10 +25,10 @@ public class FullStackWebApplication {
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(FullStackWebApplication.class, args);
 
-        DvdRepository repository = ctx.getBean(DvdRepository.class);
-        repository.save(new Dvd(1L, "Sara", Plan.lessthan_5kg));
-        repository.save(new Dvd(2L, "John", Plan.keepWeight));
-        repository.save(new Dvd(3L, "Mary", Plan.morethan10kg));
+        PlanRepository repository = ctx.getBean(PlanRepository.class);
+        repository.save(new Makeplan(1L, "Sara", Plan.lessthan_5kg));
+        repository.save(new Makeplan(2L, "John", Plan.keepWeight));
+        repository.save(new Makeplan(3L, "Mary", Plan.morethan10kg));
     }
 
 

@@ -49,7 +49,7 @@
 ### Landing Page
 
 The homepage encourages users to use this website, and remind user to login.
-(homepage.png)
+![](homepage.png)
 
 ### User Input Form
 
