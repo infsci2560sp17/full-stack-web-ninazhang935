@@ -28,7 +28,8 @@ public class PlanController {
     @RequestMapping(value = "plans", method = RequestMethod.GET)
     public ModelAndView index() {        
         return new ModelAndView("plan", "plans", repository.findAll());
-    }
+    }  //                      first plan is the html name your view
+    
     
     @RequestMapping(value = "plans/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public ModelAndView create(@ModelAttribute @Valid Makeplan plan, BindingResult result) {

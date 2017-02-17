@@ -53,8 +53,9 @@ The homepage encourages users to use this website, and remind user to login.
 
 ### User Input Form
 
-Users can make their own plan by entering their name and choosing a plan.
-(https://.../image.jpg)
+Users can make their own plan by entering their name and choosing a plan. click button the record
+is dynamically added to the chart above.
+![](addplan.png)
 
 ## API
 
