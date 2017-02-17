@@ -3,9 +3,9 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
-## [v1.3] - 2017-02-17
+## [v1.3.1] - 2017-02-17
 ### Added
-- created an entity Plan.
+- created an entity Makeplan.
 - created a repository PlanRepository.
 - created a RESTful web service and return JSON with PlanService.
 - created a MVC Controller and implement get and post methods with PlanController
@@ -26,7 +26,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - Configured developer workspace.
 - Deployed to Heroku.
 
-[Upcoming]: https://github.com/infsci2560sp17/full-stack-web-ninazhang935/compare/v1.3...head
-[v1.3]: https://github.com/infsci2560sp17/full-stack-web-ninazhang935/compare/v1.2...v1.3
+[Upcoming]: https://github.com/infsci2560sp17/full-stack-web-ninazhang935/compare/v1.3.1...head
+[v1.3.1]: https://github.com/infsci2560sp17/full-stack-web-ninazhang935/compare/v1.2...v1.3.1
 [v1.2]: https://github.com/infsci2560sp17/full-stack-web-ninazhang935/compare/v1.1...v1.2
 [v1.1]: https://github.com/infsci2560sp17/full-stack-web-ninazhang935/compare/...v1.1
