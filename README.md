@@ -39,21 +39,22 @@
 
 ## Key Features
 
-TODO : Please list key features of your project.
 
-* Key Feature 1
-* Key Feature 2
+* User login
+* make your plan 
 * Key Feature N
 
 ## Project Details
 
 ### Landing Page
 
-TODO : please provide a description of your landing page inluding a screen shot ![](https://.../image.JPG)
+The homepage encourages users to use this website, and remind user to login.
+(homepage.png)
 
 ### User Input Form
 
-TODO : please provide a description of at least 1 user input form including a screen shot ![](https://.../image.jpg)
+Users can make their own plan by entering their name and choosing a plan.
+(https://.../image.jpg)
 
 ## API
 
@@ -65,7 +66,7 @@ TODO : please provide a description of at least 1 API including a sample of requ
 
 #### Parameters
 
-- **id** _(required)_ — The Photo ID to add tags for.
+- **id** _(required)_ — The user ID to add plan.
 - **tags** _(required)_ — Comma separated tags.
 
 #### Response

@@ -3,9 +3,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
-## [Upcoming]
+## [v1.3] - 2017-02-17
 ### Added
-- Assignment 3.
+- created an entity Plan.
+- created a repository PlanRepository.
+- created a RESTful web service and return JSON with PlanService.
+- created a MVC Controller and implement get and post methods with PlanController
+- created a MVC Page and wire it to your Repository with plan.html
 
 ## [v1.2] - 2017-01-28
 ### Added
@@ -25,3 +29,4 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 [Unreleased]: https://github.com/infsci2560sp17/full-stack-web-ninazhang935/compare/v1.2...HEAD
 [v1.2]: https://github.com/infsci2560sp17/full-stack-web-ninazhang935/compare/v1.1...v1.2
 [v1.1]: https://github.com/infsci2560sp17/full-stack-web-ninazhang935/compare/...v1.1
+[v1.3]:
