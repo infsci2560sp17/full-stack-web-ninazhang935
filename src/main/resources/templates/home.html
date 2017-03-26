@@ -2,13 +2,15 @@
 <html>
     <head>
         <title>Wenjia's website</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" href="../../css/style.css"/>
     </head>
-    <body style="background-color:powderblue;">
-
-        <h1 style="text-align:center;font-family:verdana">Keep Diet! Keep Healthy!</h1>
-
-        <h2 style="text-align:center;">Do you want to loose weight or keep in good shape? We can help you!</h2>
+    <body>
+        <h1 style="text-align:center;font-family:verdana">Rate your apartment and find your own apartment.</h1>
+        
+        <h2 style="text-align:center;">We are a network of houseseekers, renters, and who want to find roommates.</h2>
         <!--This following @plans is the webpage name showed not means to jump to plan.html, it's the controller name-->
-        <p style="text-align:center;font-family:courier;color:#f245b6;">Click <a data-th-href="@{/plans}">here</a> to make your plan.</p>
+        <p style="text-align:center;font-family:courier;color:#f245b6;">Click <a data-th-href="@{/main}">here</a> to start.</p>
+        
+    
     </body>
 </html>

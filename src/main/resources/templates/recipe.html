@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>recipe page</title>
+    <style>
+        table tr:nth-child(even) {
+            background-color: #d2eff7;
+            padding: 5px;
+        }
+        table tr:nth-child(odd) {
+           background-color:#fff;
+           padding: 5px;
+        }
+        table th {
+            background-color: #3b8ec2;
+            color: white;
+            padding: 5px;
+        }
+        </style>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/option.css}" href="../../css/option.css"/>
+    </head>
+    <body>
+    <h1 data-th-inline="text" style="text-align:center;">Comment on your apartment, and make others know the real living condition.</h1>
+    <div style="text-align:center">
+        <img data-th-src="@{images/house.jpg}" alt="roommate" data-th-width="500" data-th-height="300"/>
+        </div>
+    <div>
+            <table align="center" style="width:50%">
+                <tr>
+                    <th>ID</th>
+                    <th>AptName or Address</th>
+                    <th>rankStar</th>
+                    <th>Monthly fee</th>
+                    <th>Nearby bus</th>
+                    <th>Parking</th>
+                    <th>Comment</th>
+                </tr>                
+                <tr data-th-each="recipe : ${recipes}">
+                    <td data-th-text="${recipe.id}"></td>
+                    <td data-th-text="${recipe.title}"></td>
+                    <td data-th-text="${recipe.type}"></td>
+                    <td data-th-text="${recipe.fee}"></td>
+                    <td data-th-text="${recipe.bus}"></td>
+                    <td data-th-text="${recipe.park}"></td>
+                    <td data-th-text="${recipe.comment}"></td>
+                </tr>
+            </table>
+        </div>
+    <hr />
+    <p style="text-align:left; font-family:courier;">
+        <br />
+        <form align="left" data-th-action="@{/recipes}" name="addRecipeForm" method="post">
+            Apartment Name or Address: <input type="text" name="title" /><br />
+            <br />
+            rank for the apartment, 5 star is the highest. <br />
+            <div class="styled-select blue semi-square">
+              <select name="type">
+                <option value="one">One Star</option>
+                <option value="two" >Two Star</option>
+                <option value="three">Three Star</option>
+                <option value="four">Four Star</option>
+                <option value="five">Five Star</option>
+              </select>
+            </div>
+            <br />
+            Monthly fee: <input type="text" name="fee" /><br />
+            <br />
+            What are the nearby bus? <input type="text" name="bus" /><br />
+            <br />
+            What's the parking situation? <br />
+            <input type="radio" name="park" value="freeparking" checked="checked" /> The apartment can provide free parking place.<br />
+            <input type="radio" name="park" value="garage" /> You can pay for the garage monthly. <br />
+            <input type="radio" name="park" value="outdoorparking" /> You can pay for the outdoor parking monthly.<br />
+            <input type="radio" name="park" value="Noparking" /> There's no parking place.<br />
+            <br />
+            What's your living experience in your apartment? live some comment, it'll
+            strongly help others choose their apartment.<input type="text" name="comment" /><br />
+            <br />
+            <input type="submit" value="Submit your review"/><br />
+            <br />
+        </form>
+         <form align="left" data-th-action="@{/recipes/delete}" name="addRecipeForm" method="delete">
+            Input the id that you want to delete: <input type="text" name="id" /><br /> 
+            <input type="submit" value="Delete the record"/>
+        </form>
+
+        </p>
+        
+           
+        
+    
+</body>
+</html>

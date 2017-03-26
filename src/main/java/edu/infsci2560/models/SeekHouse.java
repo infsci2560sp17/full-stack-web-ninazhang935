@@ -12,46 +12,47 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * @author Wenjia
  */
 @Entity
-public class Makeplan {
+public class SeekHouse {
 
     private static final long serialVersionUID = 1L;
 
-    public enum Demand {
-        unknown,
-        request,
-        require
+    public enum Type {
+        two_bedroom,
+        one_bedroom,
+        studio,
+        house,
+        none
     }
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
-    protected String title;
+    protected Type type;
     protected String name;
-    protected Demand demand;
+    protected Long fee;
     protected String email;
-    protected String info;
+    protected String comment;
 
-    public Makeplan() {
+    public SeekHouse() {
         this.id = Long.MAX_VALUE;
-        this.title = null;
+        this.type = Type.none;
         this.name = null;
-        this.demand = Demand.unknown;
+        this.fee = null;
         this.email = null;
-        this.info = "User didn't provide more information";
+        this.comment = null;
     }
-
-    public Makeplan(Long id, String aptname, String name, Demand demand, String email,String info) {
+    
+    public SeekHouse(Long id, Type type, String name, Long fee, String email, String comment) {
         this.id = id;
-        this.title = aptname;
         this.name = name;
-        this.demand=demand;
+        this.type=type;
+        this.fee = fee;
         this.email = email;
-        this.info = info;
+        this.comment = comment;
     }
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", title=" + this.title + ", name=" + this.name +", demand=" + this.demand + ", email=" + this.email +", info=" + this.info +" ]";
+        return "[ id=" + this.id + ", name=" + this.name + ", type=" + this.type + ", fee=" + this.fee + ", email=" + this.email +".comment="+this.comment+"]";
     }
 
     @Override
@@ -67,16 +68,6 @@ public class Makeplan {
     /**
      * @return the name
      */
-    public String getTitle() {
-        return title;
-    }
-
-    /**
-     * @param title the name to set
-     */
-    public void setTitle(String title) {
-        this.title = title;
-    }
     public String getName() {
         return name;
     }
@@ -87,18 +78,19 @@ public class Makeplan {
     public void setName(String name) {
         this.name = name;
     }
-    /**
-     * @return the workoutType
+
+    /**These functions are necessary, use to get the type user chose
+     * @return the type
      */
-    public Demand getDemand() {
-        return demand;
+    public Type getType() {
+        return type;
     }
 
     /**
-     * @param  workoutType to set
+     * @param set type
      */
-    public void setDemand(Demand demand) {
-        this.demand = demand;
+    public void setType(Type type) {
+        this.type = type;
     }
 
     /**
@@ -108,24 +100,28 @@ public class Makeplan {
         return id;
     }
 
-    /**
-     * @param id the id to set
-     */
+    
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Long getFee() {
+        return fee;
+    }
+
+    public void setFee(Long fee) {
+        this.fee = fee;
+    }
+    public void setEmail(String email) {
+        this.email = email;
     }
     public String getEmail() {
         return email;
     }
-
-    public void setEmail(String email) {
-        this.email = email;
+    public String getComment() {
+        return comment;
     }
-    public String getInfo() {
-        return info;
-    }
-
-    public void setInfo(String info) {
-        this.info = info;
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 }

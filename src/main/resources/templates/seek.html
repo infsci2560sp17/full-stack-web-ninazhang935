@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Seek house</title>
+        <style>
+        table tr:nth-child(even) {
+            background-color: #fce899;
+            padding: 5px;
+        }
+        table tr:nth-child(odd) {
+           background-color:#fff;
+           padding: 5px;
+        }
+        table th {
+            background-color: #eec111;
+            color: white;
+            padding: 5px;
+        }
+        </style>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/option.css}" href="../../css/option.css"/>
+    </head>
+
+    <body>
+    <!--
+        <h1 data-th-inline="text" style="text-align:center;">[[${#httpServletRequest.remoteUser}]]'s seeking records !</h1>
+    -->
+
+        <h1 data-th-inline="text" style="text-align:center;">Enter your demand and it will help you find great house!</h1>
+       <div style="text-align:center">
+        <img data-th-src="@{images/welcome.jpg}" alt="welcome" data-th-width="500" data-th-height="300"/>
+        </div>
+       <div>
+            <table align="center" style="width:50%">
+                <tr>
+                    <th>ID</th>
+                    <th>Type</th>
+                    <th>name</th>
+                    <th>rent fee</th>
+                    <th>Email</th>
+                    <th>Other requirement</th>
+                </tr>                
+                <tr data-th-each="seek : ${seeks}">
+                    <td data-th-text="${seek.id}"></td>
+                    <td data-th-text="${seek.type}"></td>
+                    <td data-th-text="${seek.name}"></td>
+                    <td data-th-text="${seek.fee}"></td>
+                    <td data-th-text="${seek.email}"></td>
+                    <td data-th-text="${seek.comment}"></td>
+                </tr>
+            </table>
+        </div>
+        
+        <hr />
+        
+        <p style="text-align:center; font-family:courier;">What kind of house do you want?<br />
+        <form align="center" data-th-action="@{/seeks}" name="addSeekForm" method="post">
+    
+            What type of apartment do you want to live?<br />
+            <input type="radio" name="type" value="two_bedroom" checked="checked" /> two bedrooms<br />
+            <input type="radio" name="type" value="one_bedroom" /> one bedroom<br />
+            <input type="radio" name="type" value="studio" />  studio<br />
+            <input type="radio" name="type" value="house" /> house<br />
+            <input type="radio" name="type" value="none" /> None of them<br />
+            Your name: <input type="text" name="name" /><br />
+            How much do you want to pay for it? <input type="text" name="fee" /><br />
+            <br />
+            What's your email address <input type="text" name="email" /><br />
+            Describe your expectation of your house: <input type="text" name="comment" /><br />
+            <input type="submit" value="Seek it! "/>
+        </form>
+        </p>
+        
+        <hr />       
+        <form align="center" data-th-action="@{/logout}" method="post">
+            If you don't want to keep login, please sign out.
+            <input type="submit" value="Sign Out"/>
+        </form>
+
+    </body>
+</html>

@@ -1,9 +1,9 @@
 
 package edu.infsci2560.services;
 
-import edu.infsci2560.models.Makeplan;
-import edu.infsci2560.models.Makeplan.Demand;
-import edu.infsci2560.repositories.PlanRepository;
+import edu.infsci2560.models.SeekHouse;
+import edu.infsci2560.models.SeekHouse.Type;
+import edu.infsci2560.repositories.SeekRepository;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -24,27 +24,27 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author Wenjia
  */
 @RestController
-@RequestMapping("/public/api/plans")
-public class PlanService {
+@RequestMapping("/public/api/seeks")
+public class SeekService {
 
     @Autowired
-    private PlanRepository repository;
+    private SeekRepository repository;
 
     @RequestMapping(method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<Iterable<Makeplan>> list() {
+    public ResponseEntity<Iterable<SeekHouse>> list() {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.findAll(), headers, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<Makeplan> list(@PathVariable("id") Long id) {
+    public ResponseEntity<SeekHouse> list(@PathVariable("id") Long id) {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.findOne(id), headers, HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.POST, consumes="application/json", produces = "application/json")
-    public ResponseEntity<Makeplan> create(@RequestBody Makeplan plan) {
+    public ResponseEntity<SeekHouse> create(@RequestBody SeekHouse seek) {
         HttpHeaders headers = new HttpHeaders();
-        return new ResponseEntity<>(repository.save(plan), headers, HttpStatus.OK);
+        return new ResponseEntity<>(repository.save(seek), headers, HttpStatus.OK);
     }
 }

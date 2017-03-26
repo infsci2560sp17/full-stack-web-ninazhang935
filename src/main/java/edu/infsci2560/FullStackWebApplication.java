@@ -4,7 +4,7 @@ package edu.infsci2560;
 //import edu.infsci2560.models.Dvd.Plan;
 //import edu.infsci2560.repositories.DvdRepository;
 import edu.infsci2560.models.Makeplan;
-import edu.infsci2560.models.Makeplan.Plan;
+import edu.infsci2560.models.Makeplan.Demand;
 import edu.infsci2560.repositories.PlanRepository;
 
 import org.slf4j.Logger;
@@ -26,9 +26,9 @@ public class FullStackWebApplication {
         ApplicationContext ctx = SpringApplication.run(FullStackWebApplication.class, args);
 
         PlanRepository repository = ctx.getBean(PlanRepository.class);
-        repository.save(new Makeplan(1L, "Sara", Plan.lessthan_5kg));
-        repository.save(new Makeplan(2L, "John", Plan.keepWeight));
-        repository.save(new Makeplan(3L, "Mary", Plan.morethan10kg));
+        repository.save(new Makeplan(1L, "Amerson Apartment","Jone", Demand.request, "wes9@pitt.edu" ,"I wan to find a femail roommate."));
+        repository.save(new Makeplan(2L, "Chalfont Apartment", "Lisa", Demand.require,"winbglnn@gmail.com","I want to live near University of Pittsburgh."));
+        repository.save(new Makeplan(3L, "Unknown","Smith", Demand.unknown, "876468223@qq.com", "I want to find a bedroom, "));
     }
 
 

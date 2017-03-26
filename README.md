@@ -1,29 +1,26 @@
-# Diet
+# HouseRater
 1. What is the proposed name for your Web application?
-   - Diet
+   - HouseRater
 2. Who is the target audience for your Web application?
-   - People want to lose weight or keep a diet. 
+   - People want to find nice roommates before they move in and people who want to read others' 
+     comments on the house they are intended to live in.
 3. What problem is it intended to solve for the target audience?
-   - More than a half People who want to loose weight can not keep going, 
-     they usually give up on the half way because of lacking encourage, motivation or supervision. 
-     People want to keep in good shape probalby get into hard condition to choose something to eat,
-     because some food may contains much more calorie than one can imagine which will ruin the whole 
-     diet plan or the whole day's working-out. Some have monotonous dishes like vegetables and fruits 
-     just in case of intake much calorie. I'll provide all kinds of healthy food and recommand abundant
-     low-calorie dishes that people can choose from.
+   - Some have trouble getting on with their roommates, because they don't know their roommates
+     well before move in, Our website can provide these people a chance to choose their own roommmates.
+     People who already in a house and want to find a roommate can use our website to find one. And 
+     those who don't rent a house and want to find a roommate to live with can also use our website.
+     Furthermore, people are not satisfied with their apartment after they live for some days, and our website
+     can gather the tenants' comment on the apartment which will show people the real living condition of
+     the apartment and help them choose their apartment.
 4. How will it meet the minimum project requirements?
-  - My site will include three parts: make your plan, low-fat menu, share with others.
-    People can access to the low-fat menu part without a login. But login is required if they want to 
-    customize their own plan, share their meal or commend on others' posting. I will store the login 
-    information and each user's plan to database. People can update their weight whenever they want. 
-    The system can remind you to keep going if you don't update you information for a long time.
+  - My site will include three major parts. The first part can help people find a good roommate to live with,
+    and the second part provide a platform to tenants to review their apartment and provide some detail
+    situations of the apartment. And other users can read these reviews after login. The third part is an area that people
+    want to find a house to post their demand. Someone who read it can provide some information for him.
 5. Why is your proposed Web application unique or creative beyond simply meeting the minimum requirements?
-  - People can customized their own plan in order to lossing weight or not putting up weight. 
-    And I can supervise them whether they keep going as well as they keep a healthy weight. 
-    Besides, the web application can send each user some encourage emails everyday to inspire them.
-    And people can share their meal, working-out records or the outcome of the plan. 
-    They can connect with each other to share some useful experience and encoureage others.
-
+  - It's a platform that tenants, people who want to find rommmates, and those seek for an apartment will meet.
+    And they can share some information of the house, and send their demand of the house of or the roommates.
+    People can also communicate with each other by the contact information they provided.
 
 ## Build status
 [![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web-ninazhang935.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web-ninazhang935)
@@ -36,26 +33,26 @@
 
 [Diet](https://dry-waters-29024.herokuapp.com/)
 
-
 ## Key Features
 
 
 * User login
-* make your plan 
-* Key Feature N
+* Find your roommate
+* Review your apartment
+* Find a house
 
 ## Project Details
 
-### Landing Page
+### Main Page
 
-The homepage encourages users to use this website, and remind user to login.
+The main page incudes the several main functions of the website.
 ![](homepage.png)
 
 ### User Input Form
 
-Users can make their own plan by entering their name and choosing a plan. click button the record
+Users can add their own demand to find a roommate click button then the record
 is dynamically added to the chart above.
-![](addplan.png)
+![](input.png)
 
 ## API
 
