@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
-## [v1.4.1] - 2017-03-25
+## [v1.4.2] - 2017-03-25
 ### Added
 - created three more entity use to find roommate, rate a house and upload a file.
 - created two more repositories to store the roommate records and reviews.
@@ -13,7 +13,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - created the function to upload the file.
 - use css to style the layout of the website.
 
-## [v1.3.1] - 2017-02-17
+## [v1.3.2] - 2017-02-17
 ### Added
 - created an entity SeekHouse.
 - created a repository SeekRepository.
