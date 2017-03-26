@@ -3,13 +3,23 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
+## [v1.4.1] - 2017-03-25
+### Added
+- created three more entity use to find roommate, rate a house and upload a file.
+- created two more repositories to store the roommate records and reviews.
+- created two more RESTful web service and return JSON with RecipeServece and Plan Service.
+- created three more MVC Controllers and implement get, post and delete methods with PlanController
+- created two more MVC Page and wire it to your Repository with html.
+- created the function to upload the file.
+- use css to style the layout of the website.
+
 ## [v1.3.1] - 2017-02-17
 ### Added
-- created an entity Makeplan.
-- created a repository PlanRepository.
-- created a RESTful web service and return JSON with PlanService.
-- created a MVC Controller and implement get and post methods with PlanController
-- created a MVC Page and wire it to your Repository with plan.html
+- created an entity SeekHouse.
+- created a repository SeekRepository.
+- created a RESTful web service and return JSON with SeekService.
+- created a MVC Controller and implement get and post methods with SeekController
+- created a MVC Page and wire it to your Repository with seek.html
 
 ## [v1.2] - 2017-01-28
 ### Added
@@ -26,7 +36,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - Configured developer workspace.
 - Deployed to Heroku.
 
-[Upcoming]: https://github.com/infsci2560sp17/full-stack-web-ninazhang935/compare/v1.3.2...head
+[v1.4.2]: https://github.com/infsci2560sp17/full-stack-web-ninazhang935/compare/v1.3.2...v1.4.2
 [v1.3.2]: https://github.com/infsci2560sp17/full-stack-web-ninazhang935/compare/v1.2...v1.3.2
 [v1.2]: https://github.com/infsci2560sp17/full-stack-web-ninazhang935/compare/v1.1...v1.2
 [v1.1]: https://github.com/infsci2560sp17/full-stack-web-ninazhang935/compare/...v1.1
