@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
-## [v1.4.2] - 2017-03-25
+## [v1.4.3] - 2017-03-25
 ### Added
 - created three more entity use to find roommate, rate a house and upload a file.
 - created two more repositories to store the roommate records and reviews.
@@ -36,7 +36,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - Configured developer workspace.
 - Deployed to Heroku.
 
-[v1.4.2]: https://github.com/infsci2560sp17/full-stack-web-ninazhang935/compare/v1.3.2...v1.4.2
+[v1.4.2]: https://github.com/infsci2560sp17/full-stack-web-ninazhang935/compare/v1.3.2...v1.4.3
 [v1.3.2]: https://github.com/infsci2560sp17/full-stack-web-ninazhang935/compare/v1.2...v1.3.2
 [v1.2]: https://github.com/infsci2560sp17/full-stack-web-ninazhang935/compare/v1.1...v1.2
 [v1.1]: https://github.com/infsci2560sp17/full-stack-web-ninazhang935/compare/...v1.1
