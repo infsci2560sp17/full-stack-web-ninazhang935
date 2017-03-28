@@ -57,15 +57,15 @@ public class RecipeController {
 //    @RequestMapping(value = "recipes", method = RequestMethod.DELETE)
     @RequestMapping(value = "recipes/delete", method = RequestMethod.GET)
     public ModelAndView delete(@RequestParam(value="id", required=true) Long id) {
-        log.info("*** delete id = " + id);
+        //log.info("*** delete id = " + id);
         MakeRecipe recipe = repository.findOne(id);
         
         if ( recipe != null ) {
-            log.info("*** recipe is not null");
-            repository.delete(recipe);
+            //log.info("*** recipe is not null");
+            repository.delete(id);
         }
 
-        return new ModelAndView("recipe", "recipes", repository.findOne(id));
+        return new ModelAndView("recipe", "recipes", repository.findAll());
     }
     
     

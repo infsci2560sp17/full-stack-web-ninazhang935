@@ -27,14 +27,13 @@ import org.slf4j.LoggerFactory;
  */
 @Controller
 public class SeekController {
-    private static final Logger log = LoggerFactory.getLogger(SeekController.class);
     
     @Autowired
     private SeekRepository repository;
     
-    @RequestMapping(value = "seeks", method = RequestMethod.GET)
+    @RequestMapping(value = "seek", method = RequestMethod.GET)
     public ModelAndView index() {        
-        return new ModelAndView("seek", "seeks", repository.findAll());
+        return new ModelAndView("seek", "seek", repository.findAll());
     }  //                      first plan is the html name your view
     
 //    @RequestMapping(value = "recipes/{id}", method = RequestMethod.GET)
@@ -42,31 +41,34 @@ public class SeekController {
 //        return new ModelAndView("recipe", "recipes", repository.findOne(id));
 //    }
     
-    @RequestMapping(value = "seeks", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
+    @RequestMapping(value = "seek", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public ModelAndView create(@ModelAttribute @Valid SeekHouse seek, BindingResult result) {
         repository.save(seek);
-        return new ModelAndView("seek", "seeks", repository.findAll());
+        return new ModelAndView("seek", "seek", repository.findAll());
     }
     
-    @RequestMapping(value = "seeks/{id}", method = RequestMethod.PUT, consumes="application/x-www-form-urlencoded", produces = "application/json")
-    public ModelAndView update(@ModelAttribute @Valid SeekHouse seek, BindingResult result) {
-        repository.save(seek);
-        return new ModelAndView("seek", "seeks", repository.findAll());
-    }
-    
-//    @RequestMapping(value = "recipes", method = RequestMethod.DELETE)
-    @RequestMapping(value = "seeks/delete", method = RequestMethod.GET)
+ 
+    @RequestMapping(value = "seek/delete", method = RequestMethod.GET)
     public ModelAndView delete(@RequestParam(value="id", required=true) Long id) {
-        log.info("*** delete id = " + id);
+        //log.info("*** delete id = " + id);
         SeekHouse seek = repository.findOne(id);
         
         if ( seek != null ) {
-            log.info("*** seek is not null");
-            repository.delete(seek);
+            //log.info("*** seek is not null");
+            repository.delete(id);
         }
 
-        return new ModelAndView("seek", "seeks", repository.findOne(id));
+        return new ModelAndView("seek", "seek", repository.findAll());
+    }
+    @RequestMapping(value = "seek/{id}", method = RequestMethod.GET)
+    public ModelAndView index(@PathVariable Long id) { 
+        SeekHouse seek = repository.findOne(id);
+        return new ModelAndView("seekEdit", "seek", seek);
     }
     
-    
+    @RequestMapping(value = "seek/{id}", method = RequestMethod.PUT, consumes="application/x-www-form-urlencoded", produces = "application/json")
+    public String update( @Valid SeekHouse seek, BindingResult result) {
+        repository.save(seek);
+        return "redirect:/seek";
+    }   
 }

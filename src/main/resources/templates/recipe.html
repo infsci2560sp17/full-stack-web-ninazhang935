@@ -79,11 +79,13 @@
             <input type="submit" value="Submit your review"/><br />
             <br />
         </form>
+        <hr />
          <form align="left" data-th-action="@{/recipes/delete}" name="addRecipeForm" method="delete">
             Input the id that you want to delete: <input type="text" name="id" /><br /> 
             <input type="submit" value="Delete the record"/>
         </form>
-
+        <hr />
+        <div align="left">Go back to <a data-th-href="@{/main}">home page</a> ! </div>
         </p>
         
            

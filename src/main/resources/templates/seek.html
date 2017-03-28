@@ -38,14 +38,16 @@
                     <th>rent fee</th>
                     <th>Email</th>
                     <th>Other requirement</th>
+                    
                 </tr>                
-                <tr data-th-each="seek : ${seeks}">
+                <tr data-th-each="seek : ${seek}">
                     <td data-th-text="${seek.id}"></td>
                     <td data-th-text="${seek.type}"></td>
                     <td data-th-text="${seek.name}"></td>
                     <td data-th-text="${seek.fee}"></td>
                     <td data-th-text="${seek.email}"></td>
                     <td data-th-text="${seek.comment}"></td>
+                    <td><a data-th-href="@{/seek/{id}(id=${seek.id})}">edit</a></td>
                 </tr>
             </table>
         </div>
@@ -53,7 +55,7 @@
         <hr />
         
         <p style="text-align:center; font-family:courier;">What kind of house do you want?<br />
-        <form align="center" data-th-action="@{/seeks}" name="addSeekForm" method="post">
+        <form align="center" data-th-action="@{/seek}" name="addSeekForm" method="post">
     
             What type of apartment do you want to live?<br />
             <input type="radio" name="type" value="two_bedroom" checked="checked" /> two bedrooms<br />
@@ -69,8 +71,15 @@
             <input type="submit" value="Seek it! "/>
         </form>
         </p>
+        <hr /> 
         
-        <hr />       
+         <form align="center" data-th-action="@{/seek/delete}" name="addSeekForm" method="delete">
+            Input the id that you want to delete: <input type="text" name="id" /><br /> 
+            <input type="submit" value="Delete the record"/>
+        </form>
+        <hr />
+        <div align="center">Go back to <a data-th-href="@{/main}">home page</a> ! </div>
+        <hr /> 
         <form align="center" data-th-action="@{/logout}" method="post">
             If you don't want to keep login, please sign out.
             <input type="submit" value="Sign Out"/>

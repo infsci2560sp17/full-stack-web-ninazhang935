@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Seek page</title>
+</head>
+<body>
+    Modify Info<br />
+    <form data-th-action="@{/seek/{id}(id=${seek.id})}" data-th-object="${seek}" data-th-method="put" role="form">
+        Your name: <input type="text" name="name" data-th-value="${seek.name}"/><br />
+        How much do you want to pay for it? <input type="text" name="fee" data-th-value="${seek.fee}"/><br /><br />
+            <br />
+        What's your email address <input type="text" name="email" data-th-value="${seek.email}"/><br /><br />
+        Describe your expectation of your house: <input type="text" name="comment" data-th-value="${seek.comment}"/><br />
+
+        
+        <input type="submit" value="Modify"/>
+    </form>
+    <hr />  
+    <p>Click <a data-th-href="@{/seek}">here</a> to go back to previous page.</p>
+</body>
+</html>

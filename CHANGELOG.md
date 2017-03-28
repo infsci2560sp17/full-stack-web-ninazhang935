@@ -8,10 +8,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - created three more entity use to find roommate, rate a house and upload a file.
 - created two more repositories to store the roommate records and reviews.
 - created two more RESTful web service and return JSON with RecipeServece and Plan Service.
-- created three more MVC Controllers and implement get, post and delete methods with PlanController
+- created three more MVC Controllers and implement get, post, put and delete methods with PlanController
 - created two more MVC Page and wire it to your Repository with html.
 - created the function to upload the file.
-- use css to style the layout of the website.
+- use css and js to style the layout of the website.
 
 ## [v1.3.2] - 2017-02-17
 ### Added

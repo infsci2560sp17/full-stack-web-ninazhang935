@@ -66,12 +66,19 @@
             <input type="submit" value="Submit your demand"/>
         </form>
         </p>
+        <hr />
+         <form align="center" data-th-action="@{/plans/delete}" name="addPlanForm" method="delete">
+            Input the id that you want to delete: <input type="text" name="id" /><br /> 
+            <input type="submit" value="Delete the record"/>
+        </form>
         
+        <hr />
+        <div align="center">Go back to <a data-th-href="@{/main}">home page</a> ! </div>
         <hr />       
         <form align="center" data-th-action="@{/logout}" method="post">
             If you don't want to keep login, please sign out.
             <input type="submit" value="Sign Out"/>
         </form>
-
+        
     </body>
 </html>
