@@ -31,7 +31,7 @@
 
 ## Web Site
 
-[Diet](https://dry-waters-29024.herokuapp.com/)
+[HouseRater](https://dry-waters-29024.herokuapp.com/)
 
 ## Key Features
 
