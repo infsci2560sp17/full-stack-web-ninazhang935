@@ -36,10 +36,13 @@
 ## Key Features
 
 
-* User login
-* Find your roommate
-* Review your apartment
-* Find a house
+* User login and sign up
+* put data
+* get data
+* delete data
+* post data
+* edit data
+* upload file
 
 ## Project Details
 
@@ -55,8 +58,6 @@ is dynamically added to the chart above.
 ![](input.png)
 
 ## API
-
-TODO : please provide a description of at least 1 API including a sample of request data and response data in both XML and JSON format.
 
 ### API Method 1
 

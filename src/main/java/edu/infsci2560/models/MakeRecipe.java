@@ -34,7 +34,7 @@ public class MakeRecipe {
     protected Long id;
     protected String title;
     protected Type type;
-    protected Long fee;
+    protected int fee;
     protected String bus;
     protected Park park;
     protected String comment;
@@ -43,13 +43,13 @@ public class MakeRecipe {
         this.id = Long.MAX_VALUE;
         this.title = "Unknown";
         this.type = Type.one;
-        this.fee = null;
+        this.fee = 0;
         this.bus = "Unknown";
         this.park = Park.freeparking;
         this.comment = "No comment";
     }
     
-    public MakeRecipe(Long id, String name, Type type, Long fee, String bus, Park park, String comment) {
+    public MakeRecipe(Long id, String name, Type type, int fee, String bus, Park park, String comment) {
         this.id = id;
         this.title = name;
         this.type=type;
@@ -114,12 +114,12 @@ public class MakeRecipe {
         this.id = id;
     }
 
-    public Long getFee() {
+    public int getFee() {
         return fee;
     }
 
     
-    public void setFee(Long fee) {
+    public void setFee(int fee) {
         this.fee = fee;
     }
     public String getBus() {

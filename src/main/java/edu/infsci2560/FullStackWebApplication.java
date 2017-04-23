@@ -1,11 +1,14 @@
 package edu.infsci2560;
 
-//import edu.infsci2560.models.Dvd;
-//import edu.infsci2560.models.Dvd.Plan;
-//import edu.infsci2560.repositories.DvdRepository;
 import edu.infsci2560.models.Makeplan;
+import edu.infsci2560.models.MakeRecipe;
+import edu.infsci2560.models.SeekHouse;
 import edu.infsci2560.models.Makeplan.Demand;
+import edu.infsci2560.models.MakeRecipe.Type;
+import edu.infsci2560.models.MakeRecipe.Park;
 import edu.infsci2560.repositories.PlanRepository;
+import edu.infsci2560.repositories.RecipeRepository;
+import edu.infsci2560.repositories.SeekRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,10 +29,20 @@ public class FullStackWebApplication {
         ApplicationContext ctx = SpringApplication.run(FullStackWebApplication.class, args);
 
         PlanRepository repository = ctx.getBean(PlanRepository.class);
-        repository.save(new Makeplan(1L, "Amerson Apartment","Jone", Demand.request, "wes9@pitt.edu" ,"I wan to find a femail roommate."));
-        repository.save(new Makeplan(2L, "Chalfont Apartment", "Lisa", Demand.require,"winbglnn@gmail.com","I want to live near University of Pittsburgh."));
-        repository.save(new Makeplan(3L, "Unknown","Smith", Demand.unknown, "876468223@qq.com", "I want to find a bedroom, "));
-    }
+        repository.save(new Makeplan(1L, "Amberson Apartment","Jone", Demand.request, "wes9@pitt.edu", 
+        "I wan to find a female roommate. If you require a roommate in Amberson Apartment, please contact me."));
+        repository.save(new Makeplan(2L, "Chalfont Apartment", "Lisa", Demand.require, "winbglnn@gmail.com", 
+        "I have two room available, one is a bedroom with bathroom and closet, and the other is living room, the fee of living room is cheaper."));
+        repository.save(new Makeplan(3L, "Unknown","Smith", Demand.unknown, "876468223@qq.com", 
+        "I want to find a bedroom, I live in a house in squirral hill, if you want to live with me, please contact me. And if you need a roommate in other apartment, please let me know "));
+        
+        RecipeRepository recipeRepo = ctx.getBean(RecipeRepository.class);
+        recipeRepo.save(new MakeRecipe(1L, "Parlane", Type.three, 1500, "71A, 71B", Park.garage, "This apartment is great, the room is big and the fee is low, the only shortcoming is it's far from school."));
+        recipeRepo.save(new MakeRecipe(2L, "Chalfont", Type.four, 2100, "71A, 71C, 82, 54", Park.garage, "The apartment has gym and self laundry, and the transportation is convenient and it's near school. "));
+        recipeRepo.save(new MakeRecipe(3L, "Pennsylvania", Type.three, 1360, "71A, 71C, 82, 54, P3", Park.garage, "include on-site laundry"));
+   
+        
+   }
 
 
 //    @Bean

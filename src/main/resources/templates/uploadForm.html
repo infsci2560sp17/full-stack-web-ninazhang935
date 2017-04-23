@@ -4,7 +4,8 @@
         <title>File Upload</title>
     </head>
     <body>
-
+        <h2>Share your apartment's floor plan or your room decoration with us! And let
+            others know more about the apartment.</h2>
         <div data-th-if="${message}">
             <h2 data-th-text="${message}"/>
         </div>
@@ -12,7 +13,7 @@
         <div>
             <form data-th-action="@{/files}" name="uploadFileForm" method="POST" enctype="multipart/form-data" >                
 <!--            <form data-th-action="@{/files(${_csrf.parameterName}=${_csrf.token})}" name="uploadFileForm" method="POST" enctype="multipart/form-data" >                                -->
-                File to upload:<input type="file" name="file" /><br />
+                Select picture to upload:<input type="file" name="file" /><br />
                 <input type="submit" value="Upload" />
             </form>
         </div>

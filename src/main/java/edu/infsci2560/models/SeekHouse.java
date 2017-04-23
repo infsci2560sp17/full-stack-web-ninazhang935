@@ -28,7 +28,7 @@ public class SeekHouse {
     protected Long id;
     protected Type type;
     protected String name;
-    protected Long fee;
+    protected int fee;
     protected String email;
     protected String comment;
 
@@ -36,12 +36,12 @@ public class SeekHouse {
         this.id = Long.MAX_VALUE;
         this.type = Type.none;
         this.name = null;
-        this.fee = null;
+        this.fee = 0;
         this.email = null;
         this.comment = null;
     }
     
-    public SeekHouse(Long id, Type type, String name, Long fee, String email, String comment) {
+    public SeekHouse(Long id, Type type, String name, int fee, String email, String comment) {
         this.id = id;
         this.name = name;
         this.type=type;
@@ -105,11 +105,11 @@ public class SeekHouse {
         this.id = id;
     }
 
-    public Long getFee() {
+    public int getFee() {
         return fee;
     }
 
-    public void setFee(Long fee) {
+    public void setFee(int fee) {
         this.fee = fee;
     }
     public void setEmail(String email) {

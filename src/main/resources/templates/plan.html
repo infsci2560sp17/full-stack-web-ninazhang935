@@ -16,6 +16,9 @@
             color: white;
             padding: 5px;
         }
+        p, form {
+            margin-left: 350px;
+        }
         </style>
     </head>
   
@@ -23,10 +26,10 @@
     <body>
         <h1 data-th-inline="text" style="text-align:center;">Leave your information and find a roomate.</h1>
         <div style="text-align:center">
-        <img data-th-src="@{images/roommate.jpg}" alt="roommate" data-th-width="500" data-th-height="300"/>
+        <img data-th-src="@{/images/roommate.jpg}" alt="roommate" data-th-width="500" data-th-height="300"/>
         </div>
         <div>
-            <table align="center" style="width:50%">
+            <table align="center" style="width:80%">
                 <tr>
                     <th>ID</th>
                     <th>Apt name or area</th>
@@ -48,8 +51,8 @@
         
         <hr />
         
-        <p style="text-align:center; font-family:courier;">Add your demand<br />
-        <form align="center" data-th-action="@{/plans}" name="addPlanForm" method="post">
+        <p style="text-align:left; font-family:courier;">Add your demand<br />
+        <form align="left" data-th-action="@{/plans}" name="addPlanForm" method="post">
             Apartment name or the area you want to live: <input type="text" name="title" /><br />
             Your name: <input type="text" name="name" /><br />
             Please enter your demand:<br />
@@ -63,19 +66,19 @@
             Enter your email in order to let others contact you easily: <input type="text" name="email" /><br />
             <br />
             Tell us more about you or your apartmenet, it will make others know you better: <input type="text" name="info" /><br />
-            <input type="submit" value="Submit your demand"/>
+            <input style = "font-size : 16px;" type="submit" value="Submit your demand"/>
         </form>
         </p>
         <hr />
-         <form align="center" data-th-action="@{/plans/delete}" name="addPlanForm" method="delete">
+         <form align="left" data-th-action="@{/plans/delete}" name="addPlanForm" method="delete">
             Input the id that you want to delete: <input type="text" name="id" /><br /> 
-            <input type="submit" value="Delete the record"/>
+            <input style = "font-size : 16px;" type="submit" value="Delete the record"/>
         </form>
         
         <hr />
         <div align="center">Go back to <a data-th-href="@{/main}">home page</a> ! </div>
         <hr />       
-        <form align="center" data-th-action="@{/logout}" method="post">
+        <form align="left" data-th-action="@{/logout}" method="post">
             If you don't want to keep login, please sign out.
             <input type="submit" value="Sign Out"/>
         </form>

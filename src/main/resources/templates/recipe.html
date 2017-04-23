@@ -3,6 +3,9 @@
 <head>
     <title>recipe page</title>
     <style>
+        table {
+            width : 80%;
+        }
         table tr:nth-child(even) {
             background-color: #d2eff7;
             padding: 5px;
@@ -16,16 +19,20 @@
             color: white;
             padding: 5px;
         }
+        p, form{
+            margin-left: 350px;
+        }
+        
         </style>
         <link rel="stylesheet" type="text/css" th:href="@{/css/option.css}" href="../../css/option.css"/>
     </head>
     <body>
     <h1 data-th-inline="text" style="text-align:center;">Comment on your apartment, and make others know the real living condition.</h1>
     <div style="text-align:center">
-        <img data-th-src="@{images/house.jpg}" alt="roommate" data-th-width="500" data-th-height="300"/>
+        <img data-th-src="@{/images/house.jpg}" alt="roommate" data-th-width="500" data-th-height="300"/>
         </div>
     <div>
-            <table align="center" style="width:50%">
+            <table align="center">
                 <tr>
                     <th>ID</th>
                     <th>AptName or Address</th>
@@ -47,7 +54,7 @@
             </table>
         </div>
     <hr />
-    <p style="text-align:left; font-family:courier;">
+    <p style="text-align:left; font-family:courier;">How do you feel about your current apartment? Please let us know.
         <br />
         <form align="left" data-th-action="@{/recipes}" name="addRecipeForm" method="post">
             Apartment Name or Address: <input type="text" name="title" /><br />
@@ -76,16 +83,16 @@
             What's your living experience in your apartment? live some comment, it'll
             strongly help others choose their apartment.<input type="text" name="comment" /><br />
             <br />
-            <input type="submit" value="Submit your review"/><br />
+            <input style = "font-size : 16px;" type="submit" value="Submit your review"/><br />
             <br />
         </form>
         <hr />
          <form align="left" data-th-action="@{/recipes/delete}" name="addRecipeForm" method="delete">
             Input the id that you want to delete: <input type="text" name="id" /><br /> 
-            <input type="submit" value="Delete the record"/>
+            <input style = "font-size : 16px;" type="submit" value="Delete the record"/>
         </form>
         <hr />
-        <div align="left">Go back to <a data-th-href="@{/main}">home page</a> ! </div>
+        <div align="center">Go back to <a data-th-href="@{/main}">home page</a> ! </div>
         </p>
         
            
